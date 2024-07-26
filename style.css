@@ -1,7 +1,29 @@
-
 body {
     background-color: #800020;
     font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    width: 80%;
+    background-color: white;
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+}
+
+.sidebar {
+    width: 200px;
+    background-color: #4b000f; /* A bit darker than the rest of the website */
+    padding: 20px;
 }
 
 h1 {
