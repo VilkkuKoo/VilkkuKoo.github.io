@@ -4,9 +4,18 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
+}
+
+.header {
+    width: 80%;
+    background-color: white;
+    text-align: center;
+    padding: 20px;
+    border-bottom: 2px solid black; /* Black line to separate header from main content */
 }
 
 .container {
@@ -22,11 +31,10 @@ body {
 
 .sidebar {
     width: 200px;
-    background-color: #4b000f; /* A bit darker than the rest of the website */
+    background-color: #4b000f; /* Darker than the body background color */
     padding: 20px;
 }
 
 h1 {
     font-family: 'Comic Sans MS', 'Comic Sans', cursive;
-    text-align: center;
 }
