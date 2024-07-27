@@ -8,31 +8,103 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    overflow: hidden;
 }
 
 .header {
-    width: 80%;
+    position: fixed;
+    top: 0;
+    width: 100%;
     background-color: #800020;
     text-align: center;
-    padding: 20px;
+    padding: 1px;
+    z-index: 1000;
     border-bottom: 2px solid black; /* Black line to separate header from main content */
     font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .container {
-    display: flex;
-    width: 80%;
-    background-color: #800020;
+    display: flex; 
+    width: 100%;
+    background-color: #800020; /* Darker than the body background color */
     flex: 1;
+    align-items: center; /* Center items horizontally */
+    flex-direction: column; /* Stack items vertically */
+    max-width: 1200px; /* Adjust max-width as needed */
 }
 
 .main-content {
     flex: 1;
     padding: 20px;
+    height: calc(100vh - 50px); /* Adjust based on header height */
+    overflow-y: auto; /* Add scrollbar if content is too long */
+    margin-left: 200px; /* Adjust based on sidebar width */
+    margin-top: 50px; /* Adjust based on header height */
 }
 
 .sidebar {
-    width: 100px;
+    width: 60px;
     background-color: #47111c; /* Darker than the body background color */
-    align-items: center;
+    text-align: center; /* Center the buttons vertically */
+    border-left: 2px solid black; /* Black line to separate sidebar from main content */
+    display: flex; 
+    position: fixed; /* Fixed position to keep sidebar visible */
+    right: 0;
+    flex-direction: column; /* Stack buttons vertically */
+    height: calc(100vh - 50px); /* Adjust based on header height */
+    top: 90.8667px; /* Adjust based on header height */
+    align-items: center; /* Center the buttons horizontally */
+    z-index: 1000;
+    overflow-y: auto; /* Add scrollbar if content is too long */
+    padding: 10px 0; /* Add some padding for better spacing */
+    box-shadow: 2px 0 4px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-button {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0; /* Add some margin between buttons */
+    background-color: #800020;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-family: 'Lato', sans-serif;
+}
+
+.sidebar-button:hover {
+    background-color: #a00028; /* Slightly lighter color on hover */
+}
+
+.projects-view {
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+    color: #800020;
+    padding: 20px;
+}
+
+.parent-container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Full viewport height for vertical centering */
+    margin-top: var(--header-height); /* Push down below the header */
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 20px;
+    
+}
+
+.grid-item {
+    border: 2px solid black;
+    padding: 10px;
+    text-align: center;
+}
+
+.grid-item img {
+    max-width: 100%;
+    height: auto;
 }
