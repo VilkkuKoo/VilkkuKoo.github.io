@@ -34,4 +34,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
     document.getElementById('homeButton').addEventListener('click', function() {
         document.getElementById('main-content').innerHTML = originalContent;
     });
+
+    document.getElementById('toolsButton').addEventListener('click', function() {
+        document.getElementById('main-content').innerHTML = '<p>Here will be some useful tools</p>';
+    });
 });

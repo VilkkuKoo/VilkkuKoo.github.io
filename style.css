@@ -1,5 +1,5 @@
 body {
-    background-color: #800020;
+    background-color: #8d8e8f;
     font-family: 'Lato', sans-serif;
     margin: 0;
     padding: 0;
@@ -15,7 +15,7 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: #800020;
+    background-color: #8d8e8f;
     text-align: center;
     padding: 1px;
     z-index: 1000;
@@ -24,10 +24,15 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+.header-text {
+    margin-left: -200px; /* Move header text 200px to the left */
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+}
+
 .container {
     display: flex; 
     width: 100%;
-    background-color: #800020; /* Darker than the body background color */
+    background-color: #8d8e8f; /* Darker than the body background color */
     flex: 1;
     align-items: center; /* Center items horizontally */
     flex-direction: column; /* Stack items vertically */
@@ -35,17 +40,21 @@ body {
 }
 
 .main-content {
+    display: flex;
+    justify-content: center; /* Center horizontally */
     flex: 1;
+    align-items: center; /* Center vertically */
     padding: 20px;
+    box-sizing: border-box;
     height: calc(100vh - 50px); /* Adjust based on header height */
     overflow-y: auto; /* Add scrollbar if content is too long */
-    margin-left: 200px; /* Adjust based on sidebar width */
+    margin-right: 200px; /* Adjust based on sidebar width */
     margin-top: 50px; /* Adjust based on header height */
 }
 
 .sidebar {
-    width: 60px;
-    background-color: #47111c; /* Darker than the body background color */
+    width: 80px;
+    background-color: #656566; /* Darker than the body background color */
     text-align: center; /* Center the buttons vertically */
     border-left: 2px solid black; /* Black line to separate sidebar from main content */
     display: flex; 
@@ -59,26 +68,34 @@ body {
     overflow-y: auto; /* Add scrollbar if content is too long */
     padding: 10px 0; /* Add some padding for better spacing */
     box-shadow: 2px 0 4px rgba(0, 0, 0, 0.1);
+    height: 100vh;
 }
 
 .sidebar-button {
-    width: 100%;
+    width: 80%;
     padding: 10px;
-    margin: 5px 0; /* Add some margin between buttons */
-    background-color: #800020;
+    margin: 5px 0;
+    background-color: #8d8e8f;
     color: white;
     border: none;
     cursor: pointer;
     font-family: 'Lato', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    height: 64px; /* Adjust height as needed */
+    border-radius: 8px; /* Added border-radius for rounded corners */
 }
 
 .sidebar-button:hover {
-    background-color: #a00028; /* Slightly lighter color on hover */
+    background-color: #8d8e8f; /* Slightly lighter color on hover */
 }
 
 .projects-view {
     font-family: 'Comic Sans MS', 'Comic Sans', cursive;
-    color: #800020;
+    color: #8d8e8f;
     padding: 20px;
 }
 
@@ -95,16 +112,42 @@ body {
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
     padding: 20px;
-    
+    justify-content: center; /* Center grid items horizontally */
+    align-items: center; /* Center grid items vertically */
 }
 
 .grid-item {
     border: 2px solid black;
     padding: 10px;
     text-align: center;
+    background-color: #7a7a7d; /* Updated background color */
+}
+
+.button-icon {
+    width: 24px; /* Adjust size as needed */
+    height: 24px; /* Adjust size as needed */
+    transition: opacity 0.3s, transform 0.3s;
 }
 
 .grid-item img {
     max-width: 100%;
     height: auto;
+}
+
+.button-text {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+    white-space: nowrap; /* Prevent text from wrapping */
+}
+
+.sidebar-button:hover .button-icon {
+    transform: rotateY(180deg);
+    opacity: 0;
+}
+
+.sidebar-button:hover .button-text {
+    opacity: 1;
 }
