@@ -12,7 +12,7 @@ body {
 
 .header {
     width: 80%;
-    background-color: white;
+    background-color: #800020;
     text-align: center;
     padding: 20px;
     border-bottom: 2px solid black; /* Black line to separate header from main content */
@@ -22,7 +22,8 @@ body {
 .container {
     display: flex;
     width: 80%;
-    background-color: white;
+    background-color: #800020;
+    flex: 1;
 }
 
 .main-content {
@@ -31,7 +32,7 @@ body {
 }
 
 .sidebar {
-    width: 200px;
-    background-color: #4b000f; /* Darker than the body background color */
-    padding: 20px;
+    width: 100px;
+    background-color: #47111c; /* Darker than the body background color */
+    align-items: center;
 }
