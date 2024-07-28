@@ -98,7 +98,7 @@ body {
     right: 0;
     flex-direction: column; /* Stack buttons vertically */
     height: calc(100vh - 50px); /* Adjust based on header height */
-    top: 90.8667px; /* Adjust based on header height */
+    top: 96.8667px; /* Adjust based on header height */
     align-items: center; /* Center the buttons horizontally */
     z-index: 1000;
     overflow-y: auto; /* Add scrollbar if content is too long */
