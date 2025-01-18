@@ -1,51 +1,42 @@
+/* filepath: /g:/koodit/VilkkuKoo.github.io/style.css */
 body {
-    background-color: #8d8e8f;
     font-family: 'Lato', sans-serif;
     margin: 0;
     padding: 0;
+}
+
+header {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    height: 100vh;
-    overflow: hidden;
+    padding: 10px 20px;
+    background-color: #f8f8f8;
+    border-bottom: 1px solid #ddd;
 }
 
-.header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: #8d8e8f;
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+footer {
     text-align: center;
-    padding: 1px;
-    z-index: 1000;
-    border-bottom: 2px solid black; /* Black line to separate header from main content */
-    font-family: 'Comic Sans MS', 'Comic Sans', cursive;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.header-text {
-    margin-left: -200px; /* Move header text 200px to the left */
-    font-family: 'Comic Sans MS', 'Comic Sans', cursive;
-}
-
-.main-content {
-    display: flex;
-    justify-content: center; /* Center horizontally */
-    flex: 1;
-    align-items: center; /* Center vertically */
-    padding: 20px;
-    box-sizing: border-box;
-    height: calc(100vh - 50px); /* Adjust based on header height */
-    overflow-y: auto; /* Add scrollbar if content is too long */
-    margin-right: 200px; /* Adjust based on sidebar width */
-    margin-top: 50px; /* Adjust based on header height */
-}
-
-.parent-container {
-    display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    height: 100vh; /* Full viewport height for vertical centering */
-    margin-top: var(--header-height); /* Push down below the header */
+    padding: 10px 20px;
+    background-color: #f8f8f8;
+    border-top: 1px solid #ddd;
 }
