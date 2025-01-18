@@ -11,52 +11,6 @@ body {
     overflow: hidden;
 }
 
-.button-icon {
-    width: 24px; /* Adjust size as needed */
-    height: 24px; /* Adjust size as needed */
-    transition: opacity 0.3s, transform 0.3s;
-}
-
-.button-text {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    opacity: 0;
-    transition: opacity 0.3s;
-    white-space: nowrap; /* Prevent text from wrapping */
-}
-
-.container {
-    display: flex; 
-    width: 100%;
-    background-color: #8d8e8f; /* Darker than the body background color */
-    flex: 1;
-    align-items: center; /* Center items horizontally */
-    flex-direction: column; /* Stack items vertically */
-    max-width: 1200px; /* Adjust max-width as needed */
-}
-
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
-    padding: 20px;
-    justify-content: center; /* Center grid items horizontally */
-    align-items: center; /* Center grid items vertically */
-}
-
-.grid-item {
-    border: 2px solid black;
-    padding: 10px;
-    text-align: center;
-    background-color: #7a7a7d; /* Updated background color */
-}
-
-.grid-item img {
-    max-width: 100%;
-    height: auto;
-}
-
 .header {
     position: fixed;
     top: 0;
@@ -88,66 +42,10 @@ body {
     margin-top: 50px; /* Adjust based on header height */
 }
 
-.sidebar {
-    width: 80px;
-    background-color: #656566; /* Darker than the body background color */
-    text-align: center; /* Center the buttons vertically */
-    border-left: 2px solid black; /* Black line to separate sidebar from main content */
-    display: flex; 
-    position: fixed; /* Fixed position to keep sidebar visible */
-    right: 0;
-    flex-direction: column; /* Stack buttons vertically */
-    height: calc(100vh - 50px); /* Adjust based on header height */
-    top: 96.8667px; /* Adjust based on header height */
-    align-items: center; /* Center the buttons horizontally */
-    z-index: 1000;
-    overflow-y: auto; /* Add scrollbar if content is too long */
-    padding: 10px 0; /* Add some padding for better spacing */
-    box-shadow: 2px 0 4px rgba(0, 0, 0, 0.1);
-    height: 100vh;
-}
-
-.sidebar-button {
-    width: 80%;
-    padding: 10px;
-    margin: 5px 0;
-    background-color: #8d8e8f;
-    color: white;
-    border: none;
-    cursor: pointer;
-    font-family: 'Lato', sans-serif;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    overflow: hidden;
-    height: 64px; /* Adjust height as needed */
-    border-radius: 8px; /* Added border-radius for rounded corners */
-}
-
-.sidebar-button:hover {
-    background-color: #8d8e8f; /* Slightly lighter color on hover */
-}
-
-.sidebar-button:hover .button-icon {
-    transform: rotateY(180deg);
-    opacity: 0;
-}
-
-.sidebar-button:hover .button-text {
-    opacity: 1;
-}
-
 .parent-container {
     display: flex;
     justify-content: center; /* Center horizontally */
     align-items: center; /* Center vertically */
     height: 100vh; /* Full viewport height for vertical centering */
     margin-top: var(--header-height); /* Push down below the header */
-}
-
-.projects-view {
-    font-family: 'Comic Sans MS', 'Comic Sans', cursive;
-    color: #8d8e8f;
-    padding: 20px;
 }
