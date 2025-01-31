@@ -1,4 +1,4 @@
-[Visit the new Home Page](index.html)
+[Visit the new Home Page](https://vilkkukoo.github.io/index.html)
 
 This is going thru some major renovations.
 
