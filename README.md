@@ -1,3 +1,5 @@
+[Visit the new Home Page](index.html)
+
 This is going thru some major renovations.
 
 ## This is what the "old" page looked like
