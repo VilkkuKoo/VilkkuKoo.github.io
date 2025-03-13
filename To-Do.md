@@ -1,0 +1,2 @@
+ - dark theme!
+ - photos via Proton drive?
